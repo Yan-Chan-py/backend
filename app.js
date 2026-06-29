@@ -31,7 +31,10 @@ const swaggerOptions = {
       version: '1.0.0',
       description: 'REST API for Flora Flower Boutique',
     },
-    servers: [{ url: `http://localhost:${config.port}` }],
+    servers: [
+      { url: '/' },
+      { url: `http://localhost:${config.port}` }
+    ],
   },
   apis: [path.join(__dirname, 'routes', '*.js')],
 };
